@@ -1,0 +1,95 @@
+<section id="game-reversi">
+  <div id="reversi" class="continer">
+    <div class="row justify-content-center">
+      <h1>REVERSI</h1>
+    </div>
+    <div *ngIf="viewGame == 'false'" class="row justify-content-center">
+      <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-4 text-center">
+              <div class="form-group">
+                <label class="gamers">Jugador 1:</label>
+                <input type="text" maxlength="8" [(ngModel)]="playerWhite" class="gamers imput-gamers" placeholder="Ingrese Nombre"/>
+              </div>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+              <div class="form-group">
+                <label class="gamers">Jugador 2:</label>
+                <input type="text" maxlength="8" [(ngModel)]="playerBlack" class="gamers imput-gamers" placeholder="Ingrese Nombre"/>
+              </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-3 text-center">
+              <div class="btn-reversi exit next" (click)="exitGame()">
+                <h3>Salir</h3>
+              </div>
+          </div>
+          <div class="col-12 col-lg-3 text-center">
+            <div class="btn-reversi return next" (click)="startGame()">
+              <h3 *ngIf="statusReversi.whiteCount == null && statusReversi.blackCount == null">Comenzar!</h3>
+              <h3 *ngIf="statusReversi.whiteCount != null && statusReversi.blackCount != null">Reanudar</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="viewGame == 'true'" class="row justify-content-md-center">
+      <div class="col-12 col-lg-3">
+        <div class="row">
+          <div class="col-6 col-lg-12">
+              <div class="form-inline">                  
+                <div class="gamer-white">
+                  {{statusReversi.whiteCount}}
+                </div>
+                <label class="name-gamer">{{playerWhite}}</label>
+                <fa *ngIf="statusReversi.currentPlayer == 'WHITE'" [name]="'rocket'" [fw]=true [size]=2 style="color:rgb(240, 58, 58)"></fa>
+              </div>  
+          </div>          
+          <div class="col-6 col-lg-12">
+            <div class="form-inline">
+                <div class="gamer-black">
+                    {{statusReversi.blackCount}}
+                </div>
+                <label class="name-gamer">{{playerBlack}}</label>
+                <fa *ngIf="statusReversi.currentPlayer == 'BLACK'" [name]="'rocket'" [fw]=true [size]=2 style="color:rgb(240, 58, 58)"></fa>
+            </div>            
+          </div>          
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div id="bodi-reversi" class="row justify-content-center">
+          <table>
+            <tr *ngFor="let rowsStatusReversi of statusReversi.boardRows; let indexRow = index" >
+              <td class="tab text-center" *ngFor="let cellStatusReversi of rowsStatusReversi; let indexCell = index"  (click)="postMovement(indexCell,indexRow)">  
+                  <ng-container [ngSwitch]="true">
+                    <ng-container *ngSwitchCase="cellStatusReversi === '_'"></ng-container>
+                    <ng-container *ngSwitchCase="cellStatusReversi === 'W'">
+                      <div class="white">
+
+                      </div>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="cellStatusReversi === 'B'">
+                      <div class="black">
+                        
+                      </div>
+                    </ng-container>
+                </ng-container>                 
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="row justify-content-center">
+          <div class="btn-reversi return" (click)="returnGame()">
+            <h3>Regresar</h3>
+          </div>
+          <div class="btn-reversi delete" (click)="restartGame()">
+            <h3>Reiniciar</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

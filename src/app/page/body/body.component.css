@@ -1,0 +1,41 @@
+.reversi{
+    color:#ebe841 !important;
+    text-shadow: 1px 0px 30px rgba(255, 255, 255, 1);
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
+}
+
+.reversi-muted{
+    color:#c5ab37 !important; 
+    text-shadow: 1px 0px 30px rgba(255, 255, 255, 1); 
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
+}
+
+.juegos{
+    color:#c5ab37 !important; 
+    text-shadow: 1px 0px 30px rgba(255, 255, 255, 1); 
+}
+
+.bg-img-reversi{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #00F7FF , #0011FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #00F7FF, #0011FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #00F7FF, #0011FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #00F7FF , #0011FF); /* Standard syntax */
+}
+
+.bg-img-inicio{
+background-image:  url('../../../assets/images/games5.png') !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed !important;
+background-position: center center !important;
+-webkit-background-size: 100% 100% !important;
+-moz-background-size: 100% 100% !important;
+background-size: 100% 100% !important;
+-o-background-size:100% 100% !important;
+text-align: center !important;
+color: border-left !important;
+}
+
+.bg-inicio{
+    background-color: #021422
+}
