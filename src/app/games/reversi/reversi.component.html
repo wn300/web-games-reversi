@@ -4,18 +4,21 @@
       <h1>REVERSI</h1>
     </div>
     <div *ngIf="viewGame == 'false'" class="row justify-content-center">
+      <div *ngIf="viewRequired != 'false'" class="col-12 name-gamer error text-center">
+         {{viewRequired}}
+      </div>
       <div class="col-12">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-4 text-center">
               <div class="form-group">
                 <label class="gamers">Jugador 1:</label>
-                <input type="text" maxlength="8" [(ngModel)]="playerWhite" class="gamers imput-gamers" placeholder="Ingrese Nombre"/>
+                <input type="text" maxlength="8" [(ngModel)]="playerWhite" class="gamers imput-gamers" placeholder="Ingrese Nombre" (keyup)="gamers()"/>
               </div>
           </div>
           <div class="col-12 col-lg-4 text-center">
               <div class="form-group">
                 <label class="gamers">Jugador 2:</label>
-                <input type="text" maxlength="8" [(ngModel)]="playerBlack" class="gamers imput-gamers" placeholder="Ingrese Nombre"/>
+                <input type="text" maxlength="8" [(ngModel)]="playerBlack" class="gamers imput-gamers" placeholder="Ingrese Nombre" (keyup)="gamers()"/>
               </div>
           </div>
         </div>
@@ -59,6 +62,9 @@
       </div>
       <div class="col-12 col-lg-6">
         <div id="bodi-reversi" class="row justify-content-center">
+          <div *ngIf="viewError != 'false'" class="col-12 name-gamer error text-center">
+              {{viewError}}
+          </div>
           <table>
             <tr *ngFor="let rowsStatusReversi of statusReversi.boardRows; let indexRow = index" >
               <td class="tab text-center" *ngFor="let cellStatusReversi of rowsStatusReversi; let indexCell = index"  (click)="postMovement(indexCell,indexRow)">  
@@ -91,5 +97,41 @@
         </div>
       </div>
     </div>
+  </div>
+  <button id="btn-action-modal"  data-toggle="modal" data-target="#modal-finish" style="display: none">
+  </button>
+  <div id="modal-finish" class="modal fade">
+      <div class="modal-dialog" role="document">
+          <div class="continer">
+              <div class="reversi-details" style="margin-left:0;">
+                  <h2 class="reversi-details-line">Final!!!</h2>
+                  <div class="row justify-content-end">
+                      <div class="col-12 text-center">
+                          <label class="name-gamer winner"> 
+                            <div *ngIf="statusReversi.whiteCount > statusReversi.blackCount">
+                                Felicitaciones has ganado {{playerWhite}}
+                            </div>
+                            <div *ngIf="statusReversi.whiteCount < statusReversi.blackCount">
+                                Felicitaciones has ganado {{playerBlack}}
+                            </div>
+                            <div *ngIf="statusReversi.whiteCount == statusReversi.blackCount">
+                               Ups Empate !!!
+                            </div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="row justify-content-center">
+                      <div class="col-12 text-center">
+                          <div class="btn-modal-init" (click)="restartGame()" data-dismiss="modal">
+                              <h3>Jugar de Nuevo!</h3>
+                          </div>
+                          <div id="close-modal" class="btn-modal-close" data-dismiss="modal">
+                              <h3>Cerrar</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 </section>

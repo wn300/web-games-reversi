@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "web-games-reversi"
+    "name": "heraclea-tecnical-test"
   },
   "apps": [
     {
@@ -61,9 +61,6 @@
   },
   "defaults": {
     "styleExt": "css",
-    "class": {
-      "spec": false
-    },
     "component": {}
   }
 }

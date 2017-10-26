@@ -7,12 +7,6 @@ const routes: Routes = [
     {
         path: "WebGames",
         component: PageComponent,
-        children: [
-            {
-                path: "hola",
-                component: ReversiComponent
-            }
-        ]
     },
     {
         path: "gameReversi",

@@ -1,8 +1,19 @@
-# WebGamesReversi
+# HeracleaTecnicalTest in Angular2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
 
-## Development server
+# Cloning of repostorie and Install
+## Cloning
+
+to clone the repository in the command console enter `git init` and `git clone https://gitlab.com/wn300/Heraclea-tecnical-test`.
+
+## To Install
+
+get in to the root folder of the repository `cd Heraclea-tecnical-test`.  
+if you do not have any installed angular cli version run `npm install -g @angular/cli`.
+now install the packages contained in the package.json with `npm install`.
+
+# Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -13,14 +24,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

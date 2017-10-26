@@ -1,5 +1,5 @@
 .reversi{
-    color:#ebe841 !important;
+    color:rgba(255, 123, 123, 0.986) !important;
     text-shadow: 1px 0px 30px rgba(255, 255, 255, 1);
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
 }
@@ -17,10 +17,10 @@
 
 .bg-img-reversi{
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, #00F7FF , #0011FF); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #00F7FF, #0011FF); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #00F7FF, #0011FF); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #00F7FF , #0011FF); /* Standard syntax */
+    background: -webkit-linear-gradient(left, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* Standard syntax */
 }
 
 .bg-img-inicio{
@@ -39,3 +39,39 @@ color: border-left !important;
 .bg-inicio{
     background-color: #021422
 }
+
+.play-now:hover {   
+    opacity: 1;
+}
+
+.main-container-advertising{    
+    /* background-image:  url('../../../assets/images/games3.png') !important; */
+    background: -webkit-linear-gradient(left, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(255, 115, 0) , rgb(145, 255, 0)); /* Standard syntax */
+    border-radius: 10px; 
+}
+
+.text-advertising{
+    color:#FFF !important; 
+    text-shadow: 1px 0px 30px rgba(255, 255, 255, 1); 
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
+}
+
+.img-games{
+    width: 100%;
+    height: 500px
+}
+
+.height-fluid{
+    width: 100%;
+    height: 100%
+}
+
+.bg-games {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 37px;
+}
+

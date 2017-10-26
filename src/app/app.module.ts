@@ -18,7 +18,6 @@ import { reversiService } from './services/reversi.service';
 //routing
 import { AppRoutingModule } from './app-routing.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

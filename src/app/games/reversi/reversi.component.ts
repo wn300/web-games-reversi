@@ -11,15 +11,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 })
 export class ReversiComponent implements OnInit {
-  playerWhite: string; playerBlack: string;
-  public viewGame: string;
+  playerWhite: string = ""; playerBlack: string = "";
+  public viewGame: string;public viewError:string = "false";public viewRequired:string = "false"
   public statusReversi: Array<reversiObject> = [];
 
   constructor(private _reversiService: reversiService, private route: ActivatedRoute, private router: Router) {
   }
 
   getStatusGameReversi(){
-    this._reversiService.getGameStatus().subscribe((data) => {this.statusReversi = data, console.log(data)});
+    this._reversiService.getGameStatus().subscribe((data) => {
+      this.statusReversi = data
+      if(data.gameState == "FINALIZED"){
+        document.getElementById("btn-action-modal").click();
+      }
+      console.log(data);
+    },(...args) => {
+      if(args[0].status == 401){
+        console.log("Invalid token");
+      }
+    });
    }
 
   ngOnInit() {    
@@ -34,11 +44,24 @@ export class ReversiComponent implements OnInit {
   }
 
   postMovement(_x:string, _y:string){
+    this.viewError = "false";
     this._reversiService.postMovementsGame(_x,_y).subscribe((...args) =>{
+      this.viewError = "false";
       this.getStatusGameReversi();
-    }, (...args) => {
-      debugger
-      console.log(args);
+    }, (...args) => {   
+      this.viewError = "Movimiento invalido";  
+      if(args[0].status == 400){
+        this.viewError = "Movimiento invalido";
+        console.log("The movement is invalid");
+      }
+      if(args[0].status == 401){
+        this.viewError = "Invalid token";
+        console.log("Invalid token");
+      }
+      if(args[0].status == 409){
+        this.viewError = "El juego ya finalizo o la posición no esta vacia";
+        console.log("Game is finished or position is not empty");
+      }
     })
   }
 
@@ -46,19 +69,22 @@ export class ReversiComponent implements OnInit {
     this._reversiService.restartGame().subscribe((...args) =>{
       this.getStatusGameReversi();
       }, (...args) => {
-        debugger
-        console.log(args);
+        if(args[0].status == 401){
+          console.log("Invalid token");
+        }
       })   
   }
 
   startGame(){
-    if(this.playerWhite.trim() == "" || this.playerWhite == undefined || this.playerBlack == undefined || this.playerBlack.trim() == ""){
+    if(this.playerWhite.trim() == "" || this.playerBlack.trim() == ""){      
+      this.viewRequired = "Los nombres de los jugadores son obligatorios";
       this.viewGame = "false";
     }else{
       localStorage.setItem("playerWhite", this.playerWhite);
       localStorage.setItem("playerBlack", this.playerBlack);
       this.getStatusGameReversi();
       this.viewGame = "true";
+      this.viewRequired = "false";
     } 
   }
 
@@ -72,5 +98,11 @@ export class ReversiComponent implements OnInit {
     this.restartGame();
     this.router.navigate(['/WebGames']);
     this.viewGame = "false";
+  }
+
+  gamers(){
+    if(this.playerWhite.trim() != "" && this.playerBlack.trim() != ""){   
+      this.viewRequired = "false";
+    } 
   }
 }

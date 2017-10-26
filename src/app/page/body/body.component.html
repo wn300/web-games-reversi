@@ -1,69 +1,182 @@
-<!-- <app-header></app-header> -->
-<!-- <app-footer></app-footer>  -->
-<section id="inicio" class="bg-img-reversi">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-              <h2 class="section-heading reversi">REVERSI</h2>
-              <h3 class="section-heading text-muted reversi-muted">Puebalo ahora mismo!!!</h3>
-          </div>
-      </div>
-      <div class="row text-center bg-nosotros">
-          <div class="col-md-6">
-          
-          </div>
-          <div class="col-md-6">
-              
-          </div>          
-      </div>
-  </div>
+<section id="Reversi" class="bg-img-reversi">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading reversi">Nuestro nuevo juego !!!</h1>
+                <h2 class="section-heading reversi">REVERSI</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-8 col-md-12 col-12">
+                <img src="../../../assets/images/dispositivos.png" class="img-fluid" />
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <h3 class="section-heading text-muted reversi-muted">Disponible en tu pc, tablet y celular !!!</h3>
+                <p class="description">
+                    Tu objetivo es hacer cambiar de color las fichas de tu contraincante, colocando dos de tus fichas a los lados de las del
+                    contrario.
+                </p>
+                <div id="btn-active-reversi" class="btn-modal-reversi" data-toggle="modal" data-target="#modal-reversi">
+                    <h3>Jugar Ya !!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<section id="Juegos" class="bg-img-inicio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">JUEGOS</h2>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'rocket'" [fw]=true [size]=2 style="color:rgb(240, 58, 58)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi" data-toggle="modal" data-target="#modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/reversi.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'diamond'" [fw]=true [size]=2 style="color:rgb(237, 240, 58)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/fasty.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'cubes'" [fw]=true [size]=2 style="color:rgb(94, 240, 58)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/clash.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'paper-plane-o'" [fw]=true [size]=2 style="color:rgb(106, 253, 253)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/mahjong.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'user-secret'" [fw]=true [size]=2 style="color:rgb(240, 58, 240)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/chess.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center bg-games">
+                <span class="fa-stack fa-4x">
+                    <fa [name]="'qq'" [fw]=true [size]=2 style="color:rgb(240, 167, 58)"></fa>
+                </span>
+                <div id="btn-active-reversi" class="btn-modal-reversi">
+                    <h3>Jugar</h3>
+                </div>
+                <div class="img-games">
+                    <img src="../../../assets/images/domino.png" class="img-fluid height-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="execute-advertising" data-toggle="modal" data-target="#modal-advertising" style="display: none">
+    </button>
 
-<section id="inicio" class="bg-img-inicio">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-              <h2 class="section-heading">JUEGOS</h2>
-          </div>
-      </div>
-      <div class="row text-center bg-nosotros">
-          <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-graduation-cap fa-stack-1x fa-inverse text-primary"></i>
-              </span>
-              <h4 class="service-heading juegos">Reversi</h4>
-              <p class="text-muted aling-justify">Somos una empresa prestadora de servicios para incubación de huevos fértiles y procesamiento de aves,
-                  entregando a nuestros clientes pollitos de un día de edad, aves procesadas y sus derivados con excelente
-                  calidad mediante la aplicación del conocimiento y el mejor aprovechamiento de la tecnología de punta
-                  vigente , comprometidos con la protección del medio ambiente y el bienestar de nuestros colaboradores,
-                  cumpliendo la legislación y normas nacionales e internacionales vigentes.</p>
-          </div>
-          <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-eye fa-stack-1x fa-inverse text-primary"></i>
-              </span>
-              <h4 class="service-heading">Visión</h4>
-              <p class="text-muted aling-justify">Ser la mejor Empresa de Incubación y de procesamiento de Aves del País con base en nuestro talento humano
-                  y su conocimiento, su bienestar , la tecnología, los logros zootécnicos y económicos y el mejoramiento
-                  de nuestro medio ambiente y social.
-              </p>
-          </div>
-          <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-check-square-o fa-stack-1x fa-inverse text-primary"></i>
-              </span>
-              <h4 class="service-heading">Politica de Calidad</h4>
-              <p class="text-muted aling-justify">Estamos comprometidos con la mejora continua de la eficacia del sistema de gestión de calidad y el cumplimiento
-                  de la normatividad legal vigente. Nos apoyamos en recursos de infraestructura apropiados, talento
-                  humano competente y comprometido, proveedores confiables para garantizar un excelente servicio de
-                  incubación de huevos fértiles y sacrificio de aves que cumpla con los requisitos y expectativas de
-                  nuestros clientes. Así mismo trabajamos para alcanzar la rentabilidad esperada por nuestros socios,
-                  el bienestar de nuestros colaboradores y el sostenimiento medio ambiental. .
-              </p>
-          </div>
-      </div>
-  </div>
+    <div id="modal-advertising" class="modal fade">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="main-container-advertising continer">
+                <div class="reversi-details" style="margin-left:0;">
+                    <h2 class="reversi-details-line">Aburrido???</h2>
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-6 text-center">
+                            <img src="../../../assets/images/dispositivos.png" class="img-fluid" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <img src="../../../assets/images/pcinit.png" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-12 text-center">
+                            <h2 class="text-advertising">Conoce nuestro nuevo juego Reversi y sal de la rutina</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-12">
+                            <div class="btn-modal-init" (click)="play()">
+                                <h3>Jugar ya!</h3>
+                            </div>
+                            <div class="btn-modal-info" (click)="moreInfo()" data-dismiss="modal">
+                                <h3>Mas información</h3>
+                            </div>
+                            <div id="close-modal-advertising" class="btn-modal-close" data-dismiss="modal">
+                                <h3>Cerrar</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-reversi" class="modal fade">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="main-container continer">
+                <div class="reversi-details" style="margin-left:0;">
+                    <h2 class="reversi-details-line">Reversi</h2>
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-3 text-center">
+                            <img src="../../../assets/images/reversi.png" class="img-fluid" />
+                        </div>
+                        <div class="col-12 col-lg-9">
+                            <p>Los jugadores comparten 64 fichas iguales, de caras distintas, que se van colocando por turnos
+                                en un tablero dividido en 64 escaques. Las caras de las fichas se distinguen por su color
+                                y cada jugador tiene asignado uno de esos colores, ganando quien tenga más fichas sobre el
+                                tablero al finalizar la partida. Se clasifica como juego de tablero, abstracto y territorial;
+                                al igual que el go y las amazonas.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-12 text-left">
+                            <ul>
+                                <li>Se necesitan 2 jugadores.</li>
+                                <li>La movilidad media de un jugador a lo largo de la partida es de 8 movimientos.</li>
+                                <li>En total se pueden hacer 60 movimientos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-12">
+                            <div class="btn-modal-init" routerLink="/gameReversi" routerLinkActive="active" data-dismiss="modal">
+                                <h3>Entendido Comenzar Ya</h3>
+                            </div>
+                            <div id="close-modal" class="btn-modal-close" data-dismiss="modal">
+                                <h3>Cerrar</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
