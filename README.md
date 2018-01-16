@@ -12,6 +12,17 @@ to clone the repository in the command console enter `git init` and `git clone h
 get in to the root folder of the repository `cd Heraclea-tecnical-test`.  
 if you do not have any installed angular cli version run `npm install -g @angular/cli`.
 now install the packages contained in the package.json with `npm install`.
+project execute on the bootstrap version `@4.0.0-alpha.6` and not the `@4.0.0-beta.2`
+# Cloning of repostorie and Install
+## Cloning
+
+to clone the repository in the command console enter `git init` and `git clone https://gitlab.com/wn300/Heraclea-tecnical-test`.
+
+## To Install
+
+get in to the root folder of the repository `cd Heraclea-tecnical-test`.  
+if you do not have any installed angular cli version run `npm install -g @angular/cli`.
+now install the packages contained in the package.json with `npm install`.
 
 # Development server
 

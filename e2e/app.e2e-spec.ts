@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('web-games-reversi App', () => {
+describe('heraclea-tecnical-test App', () => {
   let page: AppPage;
 
   beforeEach(() => {
